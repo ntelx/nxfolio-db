@@ -4389,15 +4389,6 @@ CREATE TABLE "foliodb".unitsystem (
     domainname character varying(50) NOT NULL
 );
 
-CREATE TABLE "foliodb".version (
-    versionname character varying(20) NOT NULL,
-    versionnumber character varying(20) NOT NULL,
-    versiondate timestamp(0) without time zone NOT NULL,
-    platform character varying(20),
-    versiondescription character varying(100) NOT NULL,
-    status character varying(10) NOT NULL
-);
-
 CREATE TABLE "foliodb".vesselrole (
     vesselrolecode character varying(5) NOT NULL,
     vesselrolename character varying(50) NOT NULL,
@@ -5126,9 +5117,6 @@ ALTER TABLE ONLY "foliodb".unitofmeasure
 ALTER TABLE ONLY "foliodb".unitsystem
     ADD CONSTRAINT pk_unitsystem PRIMARY KEY (unitsystemcode);
 
-ALTER TABLE ONLY "foliodb".version
-    ADD CONSTRAINT pk_version PRIMARY KEY (versionname, versionnumber);
-
 ALTER TABLE ONLY "foliodb".vesselrole
     ADD CONSTRAINT pk_vesselrolecode PRIMARY KEY (vesselrolecode);
 
@@ -5833,8 +5821,6 @@ CREATE INDEX unitofmeasure_categorycode_idx ON "foliodb".unitofmeasure USING btr
 CREATE UNIQUE INDEX uq_containeridentifier_idx ON "foliodb".container USING btree (containeridentifier);
 
 CREATE UNIQUE INDEX uq_vesselvehicle_vessel ON "foliodb".vesselvehicle USING btree (officialname, vesselvehiclecode, vesselvehiclecodequalifier);
-
-CREATE INDEX version_status_idx ON "foliodb".version USING btree (status);
 
 CREATE INDEX zipcoderange_country_idx ON "foliodb".zipcoderange USING btree (countrycode);
 
