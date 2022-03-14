@@ -4158,6 +4158,18 @@ CREATE TABLE "foliodb".shipmentterms (
     domainname character varying(50) NOT NULL
 );
 
+CREATE TABLE "foliodb".stateprovince (
+    stateprovincecode character varying(5) NOT NULL,
+    stateprovince character varying(50) NOT NULL,
+    statefips character varying(30),
+    status character varying(10) DEFAULT 'ACTIVE'::character varying NOT NULL,
+    createuserid character varying(8) NOT NULL,
+    createtimestamp timestamp(0) without time zone DEFAULT CURRENT_TIMESTAMP NOT NULL,
+    lastupdateuserid character varying(8),
+    lastupdatetimestamp timestamp(0) without time zone DEFAULT CURRENT_TIMESTAMP,
+    domainname character varying(50) NOT NULL
+);
+
 CREATE TABLE "foliodb".stopfunction (
     stopfunctioncode character varying(5) NOT NULL,
     stopfunctionname character varying(50),
@@ -4480,6 +4492,7 @@ CREATE SEQUENCE "foliodb".zipcoderangeid
     NO MINVALUE
     NO MAXVALUE
     CACHE 1;
+
 
 ALTER TABLE ONLY "foliodb".accessorial
     ADD CONSTRAINT pk_accessorial PRIMARY KEY (accessorialid);
@@ -5080,6 +5093,9 @@ ALTER TABLE ONLY "foliodb".shipmentstatushistory
 
 ALTER TABLE ONLY "foliodb".shipmentterms
     ADD CONSTRAINT pk_shipmentterms PRIMARY KEY (shipmenttermscode);
+
+ALTER TABLE ONLY "foliodb".stateprovince
+    ADD CONSTRAINT pk_stateprovince PRIMARY KEY (stateprovincecode);
 
 ALTER TABLE ONLY "foliodb".stopfunction
     ADD CONSTRAINT pk_stopfunction PRIMARY KEY (stopfunctioncode);
@@ -5798,6 +5814,8 @@ CREATE INDEX shipmentreference_type_idx ON "foliodb".shipmentreference USING btr
 
 CREATE INDEX shipmentreference_value_idx ON "foliodb".shipmentreference USING btree (shipmentreferencevalue);
 
+CREATE INDEX stateprovince_typecode_idx ON "foliodb".stateprovince USING btree (stateprovincecode);
+
 CREATE INDEX tariff_basetariffid_idx ON "foliodb".tariff USING btree (basetariffid);
 
 CREATE INDEX tariff_commodity_idx ON "foliodb".tariff USING btree (commodityclassgroupid);
@@ -5865,6 +5883,9 @@ ALTER TABLE ONLY "foliodb".address
 
 ALTER TABLE ONLY "foliodb".address
     ADD CONSTRAINT fk_address_country FOREIGN KEY (countrycode) REFERENCES "foliodb".country(countrycode);
+
+ALTER TABLE ONLY "foliodb".address
+    ADD CONSTRAINT fk_address_stateprovince FOREIGN KEY (stateprovincecode) REFERENCES "foliodb".stateprovince(stateprovincecode);
 
 ALTER TABLE ONLY "foliodb".invoicedetail
     ADD CONSTRAINT fk_address_invoicedetail_dest FOREIGN KEY (destinationaddressid) REFERENCES "foliodb".address(addressid);
@@ -6184,6 +6205,9 @@ ALTER TABLE ONLY "foliodb".docsubmissionstatushistory
 ALTER TABLE ONLY "foliodb".geolocation
     ADD CONSTRAINT fk_geolocation_country FOREIGN KEY (countrycode) REFERENCES "foliodb".country(countrycode);
 
+ALTER TABLE ONLY "foliodb".geolocation
+    ADD CONSTRAINT fk_geolocation_stateprovince FOREIGN KEY (stateprovincecode) REFERENCES "foliodb".stateprovince(stateprovincecode);
+
 ALTER TABLE ONLY "foliodb".holiday
     ADD CONSTRAINT fk_holiday_countryho_country FOREIGN KEY (countrycode) REFERENCES "foliodb".country(countrycode);
 
@@ -6250,6 +6274,9 @@ ALTER TABLE ONLY "foliodb".invoicedetail
 ALTER TABLE ONLY "foliodb".involvedparty
     ADD CONSTRAINT fk_invoicedetail_involvedparty FOREIGN KEY (invoicedetailid) REFERENCES "foliodb".invoicedetail(invoicedetailid) ON DELETE CASCADE;
 
+ALTER TABLE ONLY "foliodb".involvedparty
+    ADD CONSTRAINT fk_involvedparty_stateprovince FOREIGN KEY (stateprovincecode) REFERENCES "foliodb".stateprovince(stateprovincecode);
+    
 ALTER TABLE ONLY "foliodb".otherweightsandmeasures
     ADD CONSTRAINT fk_invoicedetail_otherweights FOREIGN KEY (invoicedetailid) REFERENCES "foliodb".invoicedetail(invoicedetailid) ON DELETE CASCADE;
 
