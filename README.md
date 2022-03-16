@@ -65,6 +65,7 @@ Depending on what you are making, it can be a good idea to include screenshots o
 
 ## Installation
 ### Install PostgreSQL 14.2 [Refer to the download page](https://www.postgresql.org/download/)
+- [ ] Install pgadmin as well along with postgres server
 - [ ] Remember the password provided at the time of installation
 #### NXFolio DB setup with pgAdmin
 ##### Connect to local installed postgres server
@@ -93,7 +94,18 @@ Create a new database for NXFolio
         LC_CTYPE = 'English_United States.1252'
         TABLESPACE = pg_default (-----> TODO - do we need to create a new table space)
         CONNECTION LIMIT = -1;
+##### Generate schema and tables
 
+- [ ] Load ddl/nxfolio-ddl.sql in pgAdmin query tool for foliodb database
+- [ ] Run the script
+- [ ] Verify there is no error while running script
+- [ ] Verify tables, sequences and indexes are created
+
+##### Load reference data
+
+- [ ] Load data/nxfolio-reference-data.sql in pgAdmin query tool for foliodb database
+- [ ] Run the script
+- [ ] Verify there is no error while running script
 
 
 ## Usage
