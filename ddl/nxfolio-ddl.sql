@@ -118,7 +118,7 @@ CREATE TABLE "foliodb".address (
     stateprovincecode character varying(4),
     zippostcode character varying(20),
     latitude character varying(5),
-    longitude character varying(5),
+    longitude character varying(6),
     notes character varying(3000),
     containerfreedays double precision,
     status character varying(10) DEFAULT 'ACTIVE'::character varying NOT NULL,
