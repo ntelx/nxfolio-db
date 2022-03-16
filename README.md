@@ -64,7 +64,37 @@ On some READMEs, you may see small images that convey metadata, such as whether 
 Depending on what you are making, it can be a good idea to include screenshots or even a video (you'll frequently see GIFs rather than actual videos). Tools like ttygif can help, but check out Asciinema for a more sophisticated method.
 
 ## Installation
-Within a particular ecosystem, there may be a common way of installing things, such as using Yarn, NuGet, or Homebrew. However, consider the possibility that whoever is reading your README is a novice and would like more guidance. Listing specific steps helps remove ambiguity and gets people to using your project as quickly as possible. If it only runs in a specific context like a particular programming language version or operating system or has dependencies that have to be installed manually, also add a Requirements subsection.
+### Install PostgreSQL 14.2 [Refer to the download page](https://www.postgresql.org/download/)
+- [ ] Remember the password provided at the time of installation
+#### NXFolio DB setup with pgAdmin
+##### Connect to local installed postgres server
+- [ ] Open pgAdmin application
+- [ ] If prompted, enter the password which was set during the installation. PGAdmin will connect to the local postres server.
+##### Create foliodbowner user
+Create a new user foliodbowner with below privileges
+- [ ] LOGIN
+- [ ] CREATEDB
+- [ ] CREATEROLE
+    - e.g. CREATE USER foliodbowner WITH
+        LOGIN
+        NOSUPERUSER
+        INHERIT
+        CREATEDB
+        CREATEROLE
+        PASSWORD 'XXXXXXX';
+##### Create foliodb database
+Create a new database for NXFolio
+- [ ] Owner of the database will be foliodbowner
+    - e.g. CREATE DATABASE foliodb
+        WITH 
+        OWNER = foliodbowner
+        ENCODING = 'UTF8'
+        LC_COLLATE = 'English_United States.1252'
+        LC_CTYPE = 'English_United States.1252'
+        TABLESPACE = pg_default (-----> TODO - do we need to create a new table space)
+        CONNECTION LIMIT = -1;
+
+
 
 ## Usage
 Use examples liberally, and show the expected output if you can. It's helpful to have inline the smallest example of usage that you can demonstrate, while providing links to more sophisticated examples if they are too long to reasonably include in the README.
