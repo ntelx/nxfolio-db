@@ -131,7 +131,7 @@ CREATE TABLE "foliodb".address (
 );
 
 CREATE SEQUENCE "foliodb".addressid
-    START WITH 1000
+    START WITH 30000
     INCREMENT BY 1
     NO MINVALUE
     NO MAXVALUE
@@ -3038,7 +3038,7 @@ CREATE TABLE "foliodb".orghierarchytype (
 );
 
 CREATE SEQUENCE "foliodb".orgid
-    START WITH 1000
+    START WITH 30000
     INCREMENT BY 1
     NO MINVALUE
     NO MAXVALUE
@@ -3083,7 +3083,7 @@ CREATE TABLE "foliodb".orgreference (
 );
 
 CREATE SEQUENCE "foliodb".orgreferenceid
-    START WITH 1000
+    START WITH 30000
     INCREMENT BY 1
     NO MINVALUE
     NO MAXVALUE
