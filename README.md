@@ -11,7 +11,7 @@
 </div>
 
 # NXFolio
-**NXFolio** is a universal model of supply chain data to enable detailed comparisons across any source. It has a comprehensive, flexible relational database data models that lets developers and companies build the state-of-the-art global trade and logitics solution.
+**NXFolio** is a universal model of supply chain data to enable a variety of solutions including visibility, traceability and chain of custody across the supply chain. It has a comprehensive, flexible relational data models that lets developers and companies build the state-of-the-art global trade and logitics solution.
 
 NXFolio was originally developed by researchers and engineers working on the
 ........ The system is 
@@ -23,76 +23,79 @@ Keep up-to-date with release announcements and security updates by subscribing
 to
 [announce@ntelx.org](https://groups.google.com/a/ntelx.org/forum/#!forum/announce).
 
-## Visuals
-<div align="center">
-<img src="https://ntelx-public-images.s3.amazonaws.com/foliodb-overview-2.png">
-</div>
 
 ## Installation
-NXFolio Data Model is tested and supported on Postgres 14.2 version.
+NXFolio Data Model is tested and supported on Postgres 14.2 version. The installation step creates the necessary database schema, tables, sequences, and indexes. It also creates supply chain reference data. There are two options to install NXFolio Data Model:
+  1. **Install with pgAdmin (recommmended)**
+  2. Install with psql
+
 
 ### Install with pgAdmin
+Install PostgreSQL 14.2 [Refer to the download page](https://www.postgresql.org/download/).
 
-1. Create a new user for NXFolio 
+
+1. Create a new user **foliodbowner** 
 
 ```
 CREATE USER foliodbowner WITH LOGIN NOSUPERUSER INHERIT CREATEDB CREATEROLE PASSWORD 'reset_password';
 
 ```
 
-2. Create a new database
+2. Create a new database **foliodb**
 ```
 CREATE DATABASE foliodb WITH OWNER = foliodbowner
 ```
 
-3. Open query tool in pgAdmin and copy the DDL from ddl/nxfolio-ddl.sql and execute.
+3. To create schema, tables, sequences, and indexes copy the DDL from **ddl/nxfolio-ddl.sql** into pgAdmin query tool and execute.
 
-4. In the query tool copy the reference data from data folder and execute.
+4. To create reference data copy the insert statements from **data/** folder into pgAdmin query tool and execute. 
 
+### Install with psql
+Install PostgreSQL 14.2 [Refer to the download page](https://www.postgresql.org/download/). 
 
-### Install PostgreSQL 14.2 [Refer to the download page](https://www.postgresql.org/download/)
-- [ ] Install pgadmin as well along with postgres server
-- [ ] Remember the password provided at the time of installation
-#### NXFolio DB setup with pgAdmin
-##### Connect to local installed postgres server
-- [ ] Open pgAdmin application
-- [ ] If prompted, enter the password which was set during the installation. PGAdmin will connect to the local postres server.
-##### Create foliodbowner user
-Create a new user foliodbowner with below privileges
-- [ ] LOGIN
-- [ ] CREATEDB
-- [ ] CREATEROLE
-    - e.g. CREATE USER foliodbowner WITH
-        LOGIN
-        NOSUPERUSER
-        INHERIT
-        CREATEDB
-        CREATEROLE
-        PASSWORD 'XXXXXXX';
-##### Create foliodb database
-Create a new database for NXFolio
-- [ ] Owner of the database will be foliodbowner
-    - e.g. CREATE DATABASE foliodb
-        WITH 
-        OWNER = foliodbowner
-        ENCODING = 'UTF8'
-        LC_COLLATE = 'English_United States.1252'
-        LC_CTYPE = 'English_United States.1252'
-        TABLESPACE = pg_default (-----> TODO - do we need to create a new table space)
-        CONNECTION LIMIT = -1;
-##### Generate schema and tables
+1. Connect to psql with root/superuser
 
-- [ ] Load ddl/nxfolio-ddl.sql in pgAdmin query tool for foliodb database
-- [ ] Run the script
-- [ ] Verify there is no error while running script
-- [ ] Verify tables, sequences and indexes are created
+```
+psql -h <host> -p <port> -d postgres -U <user_name>
 
-##### Load reference data
+```
+If you are running Postgress locally at default port 5432 with default database postgres and user postgres
 
-- [ ] Load data/nxfolio-reference-data.sql in pgAdmin query tool for foliodb database
-- [ ] Run the script
-- [ ] Verify there is no error while running script
+```
+psql -h 127.0.0.1 -p 5432 -d postgres -U postgres
 
+```
+Notes: In some Mac version the port could be 5433.
+
+2. After connecting to psql create user **foliodbowner**
+
+```
+postgres=# CREATE USER foliodbowner WITH PASSWORD 'reset_password' CREATEDB;
+```
+
+3. Quit psql by typing \q and connect again with user **foliodbowner**
+
+```
+psql -h <host> -p <port> -d postgres -U foliodbowner
+```
+
+4. Create a new database **foliodb**
+```
+postgres=# CREATE USER foliodbowner WITH PASSWORD 'reset_password' CREATEDB;
+```
+5. Connect to **foliodb** database
+```
+postgres=# \c foliodb foliodbowner
+```
+6. Execute DDL script at **ddl/nxfolio-ddl.sql** 
+```
+foliodb=> \i <path-to-ddl-file>/ddl/nxfolio-ddl.sql
+```
+
+## Visuals
+<div align="center">
+<img src="https://ntelx-public-images.s3.amazonaws.com/foliodb-overview-2.png">
+</div>
 
 ## Usage
 Use examples liberally, and show the expected output if you can. It's helpful to have inline the smallest example of usage that you can demonstrate, while providing links to more sophisticated examples if they are too long to reasonably include in the README.
