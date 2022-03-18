@@ -1,70 +1,233 @@
-# nxfolio-db
+<div align="center">
+  <img src="https://images.squarespace-cdn.com/content/v1/5f5908d1fc93772d79901335/1600194319074-2RVN3VAOO43MBNFOL9H9/Screen_Shot_2020-09-09_at_12.04.52_PM-removebg-preview.png?format=1500w">
+</div>
+<div align="center">
+  <strong>NTELX provides analytical insights and risk management for global trade and international supply chains</strong>
+  <br>
+  <a href="https://www.ntelx.com/casestudies">View Case Studies »</a>
+  <br>
+  <br>
+  <br>
+</div>
 
-Database scripts
+# NXFolio
+**NXFolio** is a universal model of supply chain data to enable a variety of solutions including visibility, traceability and chain of custody across the supply chain. It has a comprehensive, flexible relational data models that lets developers and companies build the state-of-the-art global trade and logitics solution.
 
-## Getting started
+NXFolio was originally developed by researchers and engineers working on the
+........ The system is 
+general enough to be applicable in a wide variety of other domains, as well.
 
-To make it easy for you to get started with GitLab, here's a list of recommended next steps.
+NXFolio provides stable Postgres data model and extensive supply chain reference data.
 
-Already a pro? Just edit this README.md and make it your own. Want to make it easy? [Use the template at the bottom](#editing-this-readme)!
+Keep up-to-date with release announcements and security updates by subscribing
+to
+[announce@ntelx.org](https://groups.google.com/a/ntelx.org/forum/#!forum/announce).
 
-## Add your files
-
-- [ ] [Create](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#create-a-file) or [upload](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#upload-a-file) files
-- [ ] [Add files using the command line](https://docs.gitlab.com/ee/gitlab-basics/add-file.html#add-a-file-using-the-command-line) or push an existing Git repository with the following command:
-
-```
-cd existing_repo
-git remote add origin https://gitlab.com/ntelx-opensource/nxfolio-db.git
-git branch -M main
-git push -uf origin main
-```
-
-## Integrate with your tools
-
-- [ ] [Set up project integrations](https://gitlab.com/ntelx-opensource/nxfolio-db/-/settings/integrations)
-
-## Collaborate with your team
-
-- [ ] [Invite team members and collaborators](https://docs.gitlab.com/ee/user/project/members/)
-- [ ] [Create a new merge request](https://docs.gitlab.com/ee/user/project/merge_requests/creating_merge_requests.html)
-- [ ] [Automatically close issues from merge requests](https://docs.gitlab.com/ee/user/project/issues/managing_issues.html#closing-issues-automatically)
-- [ ] [Enable merge request approvals](https://docs.gitlab.com/ee/user/project/merge_requests/approvals/)
-- [ ] [Automatically merge when pipeline succeeds](https://docs.gitlab.com/ee/user/project/merge_requests/merge_when_pipeline_succeeds.html)
-
-## Test and Deploy
-
-Use the built-in continuous integration in GitLab.
-
-- [ ] [Get started with GitLab CI/CD](https://docs.gitlab.com/ee/ci/quick_start/index.html)
-- [ ] [Analyze your code for known vulnerabilities with Static Application Security Testing(SAST)](https://docs.gitlab.com/ee/user/application_security/sast/)
-- [ ] [Deploy to Kubernetes, Amazon EC2, or Amazon ECS using Auto Deploy](https://docs.gitlab.com/ee/topics/autodevops/requirements.html)
-- [ ] [Use pull-based deployments for improved Kubernetes management](https://docs.gitlab.com/ee/user/clusters/agent/)
-- [ ] [Set up protected environments](https://docs.gitlab.com/ee/ci/environments/protected_environments.html)
-
-***
-
-# Editing this README
-
-When you're ready to make this README your own, just edit this file and use the handy template below (or feel free to structure it however you want - this is just a starting point!).  Thank you to [makeareadme.com](https://www.makeareadme.com/) for this template.
-
-## Suggestions for a good README
-Every project is different, so consider which of these sections apply to yours. The sections used in the template are suggestions for most open source projects. Also keep in mind that while a README can be too long and detailed, too long is better than too short. If you think your README is too long, consider utilizing another form of documentation rather than cutting out information.
-
-## Name
-Choose a self-explaining name for your project.
-
-## Description
-Let people know what your project can do specifically. Provide context and add a link to any reference visitors might be unfamiliar with. A list of Features or a Background subsection can also be added here. If there are alternatives to your project, this is a good place to list differentiating factors.
-
-## Badges
-On some READMEs, you may see small images that convey metadata, such as whether or not all the tests are passing for the project. You can use Shields to add some to your README. Many services also have instructions for adding a badge.
-
-## Visuals
-Depending on what you are making, it can be a good idea to include screenshots or even a video (you'll frequently see GIFs rather than actual videos). Tools like ttygif can help, but check out Asciinema for a more sophisticated method.
+<a href="https://ntelx-public-images.s3.amazonaws.com/shipment-any-cols.png"><img src="https://ntelx-public-images.s3.amazonaws.com/accessorial.png" width="400" height="300"/></a>
+<a href="https://ntelx-public-images.s3.amazonaws.com/foliodb-overview-2.png"><img src="https://ntelx-public-images.s3.amazonaws.com/foliodb-overview-2.png" width="400"/></a>
+<br/>
 
 ## Installation
-Within a particular ecosystem, there may be a common way of installing things, such as using Yarn, NuGet, or Homebrew. However, consider the possibility that whoever is reading your README is a novice and would like more guidance. Listing specific steps helps remove ambiguity and gets people to using your project as quickly as possible. If it only runs in a specific context like a particular programming language version or operating system or has dependencies that have to be installed manually, also add a Requirements subsection.
+NXFolio Data Model is tested and supported on Postgres 14.2 version. The installation step creates the necessary database schema, tables, sequences, and indexes. It also creates supply chain reference data. There are two options to install NXFolio Data Model:
+  1. **Install with pgAdmin (recommmended)**
+  2. Install with psql
+
+
+### Install with pgAdmin
+Install PostgreSQL 14.2 [Refer to the download page](https://www.postgresql.org/download/).
+
+
+1. Create a new user **foliodbowner** 
+
+```
+CREATE USER foliodbowner WITH LOGIN NOSUPERUSER INHERIT CREATEDB CREATEROLE PASSWORD 'reset_password';
+
+```
+
+2. Create a new database **foliodb**
+```
+CREATE DATABASE foliodb WITH OWNER = foliodbowner
+```
+
+3. To create schema, tables, sequences, and indexes copy the DDL from **ddl/nxfolio-ddl.sql** into pgAdmin query tool and execute.
+
+4. To create reference data copy the insert statements from **data/** folder into pgAdmin query tool and execute. 
+
+### Install with psql
+Install PostgreSQL 14.2 [Refer to the download page](https://www.postgresql.org/download/). 
+
+1. Connect to psql with root/superuser
+
+```
+psql -h <host> -p <port> -d postgres -U <user_name>
+
+```
+If you are running Postgress locally at default port 5432 with default database postgres and user postgres
+
+```
+psql -h 127.0.0.1 -p 5432 -d postgres -U postgres
+
+```
+Notes: In some Mac version the port could be 5433.
+
+2. After connecting to psql create user **foliodbowner**
+
+```
+postgres=# CREATE USER foliodbowner WITH PASSWORD 'reset_password' CREATEDB;
+```
+
+3. Quit psql by typing \q and connect again with user **foliodbowner**
+
+```
+psql -h <host> -p <port> -d postgres -U foliodbowner
+```
+
+4. Create a new database **foliodb**
+```
+postgres=# CREATE USER foliodbowner WITH PASSWORD 'reset_password' CREATEDB;
+```
+5. Connect to **foliodb** database
+```
+postgres=# \c foliodb foliodbowner
+```
+6. Execute DDL script at **ddl/nxfolio-ddl.sql** 
+```
+foliodb=> \i <path-to-ddl-file>/ddl/nxfolio-ddl.sql
+```
+
+## ER Diagram (a quick look)
+  
+  
+
+
+
+
+### Shipment
+The center transactional entity Shipment in NXFolio captures every data point that is possible in the global supply chain.
+
+<div align="center">
+<img src="https://ntelx-public-images.s3.amazonaws.com/shipment.png"  width="50%" height="50%">
+</div>
+
+### Payment
+
+<div align="center">
+<img src="https://ntelx-public-images.s3.amazonaws.com/Payment.png" width="50%" height="50%">
+</div>
+
+### Accessorial
+
+<div align="center">
+<img src="https://ntelx-public-images.s3.amazonaws.com/accessorial.png" width="50%" height="50%">
+</div>
+
+
+### Document
+
+<div align="center">
+<img src="https://ntelx-public-images.s3.amazonaws.com/Document.png" width="50%" height="50%">
+</div>
+
+<br />
+<br />
+
+**Note**: NXFolio uses DBeaver to geneate ER diagram that follows IDEF1X standards
+<div align="left">
+  <img src="https://ntelx-public-images.s3.amazonaws.com/ER-IDEF1X.png" width="250" height="200" >
+  </div>
+
+## Reference Data
+There are total 85 reference tables with m records that captures various business data required in global trade. 
+
+Table | Category | Description |
+--- | --- | --- |
+ACCESSORIALTYPE|Category|Desc
+ADDRESSTYPE|Category|Desc
+APPOINTMENTREASON|Category|Desc
+BOLSTATUSTYPE|Category|Desc
+BUSINESSACTIVITIES|Category|Desc
+COMMODITYCLASS|Category|Desc
+COMMODITYCLASSGROUP|Category|Desc
+COMMODITYCLASSTYPE|Category|Desc
+COMMUNICATIONMETHODTYPE|Category|Desc
+CONTACTSALUTATION|Category|Desc
+CONTAINERGROUPMAPPING|Category|Desc
+CONTAINERTYPE|Category|Desc
+CONTAINERTYPEMODE|Category|Desc
+CONVEYANCECATEGORY|Category|Desc
+CONVEYANCEMAKETYPE|Category|Desc
+CONVEYANCEMODELTYPE|Category|Desc
+CONVEYANCESTATUS|Category|Desc
+CONVEYANCETYPE|Category|Desc
+COUNTRY|Category|Desc
+DATARESOLUTIONTYPE|Category|Desc
+DATETIMESTAMPREFERENCETYPE|Category|Desc
+DETERMINANT|Category|Desc
+DOCSUBMISSIONSTATUS|Category|Desc
+DOCUMENTFORMATTYPE|Category|Desc
+DOCUMENTSTATUS|Category|Desc
+DOCUMENTTYPE|Category|Desc
+DOMAINOBJECT|Category|Desc
+DVETYPE|Category|Desc
+EDITRANSACTIONSET|Category|Desc
+EDI_ISO_EQUIPMENTTYPE|Category|Desc
+EQUIPMENTSTATUS|Category|Desc
+EVENTCATEGORY|Category|Desc
+EVENTREFERENCETYPE|Category|Desc
+EVENTTYPE|Category|Desc
+EXPORTINFORMATIONTYPE|Category|Desc
+FREIGHTPAYMENTTYPE|Category|Desc
+GEOTYPE|Category|Desc
+HAZMATMATERIALTYPE|Category|Desc
+HOLIDAY|Category|Desc
+INBONDTYPE|Category|Desc
+INCOTERMSTYPE|Category|Desc
+INSPECTIONORCHECKTYPE|Category|Desc
+INVOICECHARGETYPE|Category|Desc
+INVOICESTATUS|Category|Desc
+INVOLVEDPARTYREFERENCETYPE|Category|Desc
+INVOLVEDPARTYTYPE|Category|Desc
+ITEMCLASSIFICATIONTYPE|Category|Desc
+ITLCLASSIFICATION|Category|Desc
+MARKSNUMBERSTYPE|Category|Desc
+METHODOFPAYMENT|Category|Desc
+ORDERSTATUS|Category|Desc
+ORDERTYPE|Category|Desc
+ORGHIERARCHYTYPE|Category|Desc
+ORGREFERENCETYPE|Category|Desc
+ORGROLE|Category|Desc
+OTHERMEASURETYPE|Category|Desc
+PACKAGEREFERENCETYPE|Category|Desc
+PACKAGETYPE|Category|Desc
+PAYMENTTERMSTYPE|Category|Desc
+PREADVICESOURCETYPE|Category|Desc
+RATECALCULATIONTYPE|Category|Desc
+RATECOSTTYPE|Category|Desc
+SECURITYDEVICETYPE|Category|Desc
+SECURITYDEVICEVALUETYPE|Category|Desc
+SELLPACKTYPE|Category|Desc
+SERVICELEVEL|Category|Desc
+SERVICETYPE|Category|Desc
+SHIPMENTCHARGETYPE|Category|Desc
+SHIPMENTINSTRUCTIONTYPE|Category|Desc
+SHIPMENTREFERENCETYPE|Category|Desc
+SHIPMENTSTATUS|Category|Desc
+SHIPMENTTERMS|Category|Desc
+STATEPROVINCE|Category|Desc
+STOPFUNCTION|Category|Desc
+SYSTEMROLE|Category|Desc
+TEMPLATEOWNERTYPE|Category|Desc
+TIMEZONE|Category|Desc
+TRANSACTIONSTATUSTYPE|Category|Desc
+TRANSITTIMETYPE|Category|Desc
+TRANSPORTMODE|Category|Desc
+UNITCATEGORY|Category|Desc
+UNITOFMEASURE|Category|Desc
+UNITSYSTEM|Category|Desc
+VERSION|Category|Desc
+VESSELROLE|Category|Desc
+
+
 
 ## Usage
 Use examples liberally, and show the expected output if you can. It's helpful to have inline the smallest example of usage that you can demonstrate, while providing links to more sophisticated examples if they are too long to reasonably include in the README.
