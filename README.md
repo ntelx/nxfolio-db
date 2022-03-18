@@ -13,10 +13,10 @@
 # NXFolio
 **NXFolio** is a platform that can serve as the basis for carrier and freight systems, community systems, order management systems, and other logistics and supply chain related solutions as might be imagined.  The foundation of the platform is a relational data model that manages data on orders, invoices, payments, shipments, shipment routing, rates, administrative and shipping events, entities and entity relationships, associated documentation, addresses and contact details, and various necessary reference data.  Riding atop this data model is a web-based application enabling the management of orders, payments, shipments, and entities.  NTELX successfully implement this platform in various solutions and makes this platform available to the community.<br>
 <br>
-## Capabilities of NXFolio
+### Capabilities of NXFolio
 NXFolio is a software platform that captures and synchronizes data to facilitate trade and transport processes.  It serves as the foundation for cargo community systems, single window systems, and other systems that accelerate trade processing, transport operations, and enables transparency and traceability in supply chain/logistics environments.  The standards-compliant, web-accessible architecture of the platform provides for rapid deployment and rollout, and the flexibility to meet local needs and evolving requirements.  Using a flexible data architecture, NXFolio ensures that you can capture all relevant details of your supply chain and provides you with a platform for the integration of logistics data with trade partners and stakeholders.<br>
 <br>
-## Address Book
+### Address Book
 NXFolio includes an Address Book module that allows the management of simple and complex business organizations.  Within this module, an organization can have locations and each location can have multiple contacts.  Organizations can have contacts directly as well.  When creating an organization, you can specify its name as well as multiple addresses.  Each organization, location, or contact can have multiple addresses.  Each organization can be referenced by various identifiers, such SIC code, DUNS number, EIN/tax ID, etc.<br>
 <br>
 The organization hierarchy represents the primary structure of organizations, locations and contacts in the system.  The database structure allows for hierarchical structures of unlimited depth (parent company with child companies, each of which have further subsidiaries, etc. - each of which have multiple addresses and contact details).<br>
@@ -27,22 +27,22 @@ Each organization may have a Role in the system.  This enables advanced organiza
 <br>
 Communication method represents a mechanism for communicating with an organization. Common examples of communication methods are Email address, Phone number, Fax number, etc. These contact methods are the means used by the system to inform Involved Parties of changes in shipment status.
 <br>
-## Shipment
+### Shipment
 The Shipment module of NXFolio enables the management of shipments.  Shipments can be created and updated, with details including Involved Parties (Shippers, Consignees, etc.), identifiers such as Bill of Lading number or Booking Number, routing details and conveyances, and more.
 <br>
 Shipment Home shows all shipments that are not closed. If the user has appropriate permissions, it provides links to view edit or delete the shipments.  The listing provides a summary of each shipment, including the mode of transportation, reference identifiers, the current status, origin and destination, and the date/time that the shipment was last updated.<br>
 <br>
 The Shipment Details provide the full data on a shipment, including all Involved Parties, routing details, equipment/containers associated with the shipment, package level details, etc.<br>
 <br>
-## Events
+### Events
 Events in NXFolio are any physical or administrative action taken against a Shipment, Invoice, or Order.  Events may include loads onto and discharges from vessels, in-gate/out-gate movements at ports, releases and approvals, etc.  Event details include the action, the entity conducting the action, the reporter of the event, and the date/time of the event.<br>
 <br>
-## Orders
+### Orders
 The Order module of NXFolio provides for the management of Orders, such as Purchase Orders.  NXFolio provides a way to create, view, and release orders in full or in part.  The status of Orders can be viewed and managed.<br>
 <br>
 Each Order consists of one or more line items.  The Seller has the ability to release all or any combination of the line items that are in the order.<br>
 <br>
-## Invoices & Payments
+### Invoices & Payments
 NXFolio contains a basic invoicing and payments capability.  Invoice and Payment details can be stored and simple actions, such as approvals, can be initiated in the user interface.  For full functionality, such as integration with payment processors and custom workflows, this functionality must be supplemented with custom extensions (i.e. payment processor API connectors, bank data files, data exchanges with third party systems, etc.).<br>
 <br>
 <br>
