@@ -167,93 +167,93 @@ The center transactional entity Shipment in NXFolio captures every data point th
 ## Reference Data
 There are total 85 reference tables with m records that captures various business data required in global trade. 
 
-Table | Category | Description |
---- | --- | --- |
-ACCESSORIALTYPE|Category|Desc
-ADDRESSTYPE|Category|Desc
-APPOINTMENTREASON|Category|Desc
-BOLSTATUSTYPE|Category|Desc
-BUSINESSACTIVITIES|Category|Desc
-COMMODITYCLASS|Category|Desc
-COMMODITYCLASSGROUP|Category|Desc
-COMMODITYCLASSTYPE|Category|Desc
-COMMUNICATIONMETHODTYPE|Category|Desc
-CONTACTSALUTATION|Category|Desc
-CONTAINERGROUPMAPPING|Category|Desc
-CONTAINERTYPE|Category|Desc
-CONTAINERTYPEMODE|Category|Desc
-CONVEYANCECATEGORY|Category|Desc
-CONVEYANCEMAKETYPE|Category|Desc
-CONVEYANCEMODELTYPE|Category|Desc
-CONVEYANCESTATUS|Category|Desc
-CONVEYANCETYPE|Category|Desc
-COUNTRY|Category|Desc
-DATARESOLUTIONTYPE|Category|Desc
-DATETIMESTAMPREFERENCETYPE|Category|Desc
-DETERMINANT|Category|Desc
-DOCSUBMISSIONSTATUS|Category|Desc
-DOCUMENTFORMATTYPE|Category|Desc
-DOCUMENTSTATUS|Category|Desc
-DOCUMENTTYPE|Category|Desc
-DOMAINOBJECT|Category|Desc
-DVETYPE|Category|Desc
-EDITRANSACTIONSET|Category|Desc
-EDI_ISO_EQUIPMENTTYPE|Category|Desc
-EQUIPMENTSTATUS|Category|Desc
-EVENTCATEGORY|Category|Desc
-EVENTREFERENCETYPE|Category|Desc
-EVENTTYPE|Category|Desc
-EXPORTINFORMATIONTYPE|Category|Desc
-FREIGHTPAYMENTTYPE|Category|Desc
-GEOTYPE|Category|Desc
-HAZMATMATERIALTYPE|Category|Desc
-HOLIDAY|Category|Desc
-INBONDTYPE|Category|Desc
-INCOTERMSTYPE|Category|Desc
-INSPECTIONORCHECKTYPE|Category|Desc
-INVOICECHARGETYPE|Category|Desc
-INVOICESTATUS|Category|Desc
-INVOLVEDPARTYREFERENCETYPE|Category|Desc
-INVOLVEDPARTYTYPE|Category|Desc
-ITEMCLASSIFICATIONTYPE|Category|Desc
-ITLCLASSIFICATION|Category|Desc
-MARKSNUMBERSTYPE|Category|Desc
-METHODOFPAYMENT|Category|Desc
-ORDERSTATUS|Category|Desc
-ORDERTYPE|Category|Desc
-ORGHIERARCHYTYPE|Category|Desc
-ORGREFERENCETYPE|Category|Desc
-ORGROLE|Category|Desc
-OTHERMEASURETYPE|Category|Desc
-PACKAGEREFERENCETYPE|Category|Desc
-PACKAGETYPE|Category|Desc
-PAYMENTTERMSTYPE|Category|Desc
-PREADVICESOURCETYPE|Category|Desc
-RATECALCULATIONTYPE|Category|Desc
-RATECOSTTYPE|Category|Desc
-SECURITYDEVICETYPE|Category|Desc
-SECURITYDEVICEVALUETYPE|Category|Desc
-SELLPACKTYPE|Category|Desc
-SERVICELEVEL|Category|Desc
-SERVICETYPE|Category|Desc
-SHIPMENTCHARGETYPE|Category|Desc
-SHIPMENTINSTRUCTIONTYPE|Category|Desc
-SHIPMENTREFERENCETYPE|Category|Desc
-SHIPMENTSTATUS|Category|Desc
-SHIPMENTTERMS|Category|Desc
-STATEPROVINCE|Category|Desc
-STOPFUNCTION|Category|Desc
-SYSTEMROLE|Category|Desc
-TEMPLATEOWNERTYPE|Category|Desc
-TIMEZONE|Category|Desc
-TRANSACTIONSTATUSTYPE|Category|Desc
-TRANSITTIMETYPE|Category|Desc
-TRANSPORTMODE|Category|Desc
-UNITCATEGORY|Category|Desc
-UNITOFMEASURE|Category|Desc
-UNITSYSTEM|Category|Desc
-VERSION|Category|Desc
-VESSELROLE|Category|Desc
+Table | Category | Description | Example |
+--- | --- | --- | --- |
+ACCESSORIALTYPE|Category|Accessorial freight charges are fees added to a shipper's freight invoice for services the motor freight carrier performed beyond the standard pick-up and delivery operation designated at the time a shipment is tendered. These can be FUEL SURCHARGE, HAZMAT CHARGE, INSURANCE etc. |FUEL SURCHARGE, HAZMAT CHARGE, INSURANCE etc. |
+ADDRESSTYPE|Category|Different address types like billing, shipping and office address||
+APPOINTMENTREASON|Category|Desc||
+BOLSTATUSTYPE|Category|Bill of lading status|REGULAR BILL, SEC 321 TARIFF ACT 1930, FROB E CARGO LADEN IN FOREIGN, ONE ENTRY PER C4 CODE|
+BUSINESSACTIVITIES|Category|Desc||
+COMMODITYCLASS|Category|A list based on National Motor Freight Classification|NMFC CLASS 100, NMFC CLASS 250|
+COMMODITYCLASSGROUP|Category|Group of commodity class|NMFC, NMFC-All, FAK|
+COMMODITYCLASSTYPE|Category|Desc||
+COMMUNICATIONMETHODTYPE|Category|Communication method type|EMAIL, MOBILE, PHONE,EFORWARD|
+CONTACTSALUTATION|Category|Desc||
+CONTAINERGROUPMAPPING|Category|Desc||
+CONTAINERTYPE|Category|Type of containers|20GP, 20PF, 22B0, 22RT|
+CONTAINERTYPEMODE|Category|Desc||
+CONVEYANCECATEGORY|Category|Conveyance category|TRUCK, VESSEL, RAILWAY|
+CONVEYANCEMAKETYPE|Category|Conveyance make|FORD, PETERBILT, KENWORTH, MACK|
+CONVEYANCEMODELTYPE|Category|Conveyance model|MSL, P385, P387|
+CONVEYANCESTATUS|Category|Conveyance status|IN ROUTE, MAINTENANCE|
+CONVEYANCETYPE|Category|Conveyance type|18 Wheeler, Tank Truck, 40 FEET CONTAINER|
+COUNTRY|Category|List of countries|Example|
+DATARESOLUTIONTYPE|Category|Desc|Example|
+DATETIMESTAMPREFERENCETYPE|Category|Desc|Example|
+DETERMINANT|Category|Desc|Example|
+DOCSUBMISSIONSTATUS|Category|Desc|Example|
+DOCUMENTFORMATTYPE|Category|Desc|Example|
+DOCUMENTSTATUS|Category|Desc|Example|
+DOCUMENTTYPE|Category|Desc|Example|
+DOMAINOBJECT|Category|Desc|Example|
+DVETYPE|Category|Desc|Example|
+EDITRANSACTIONSET|Category|Desc|Example|
+EDI_ISO_EQUIPMENTTYPE|Category|Desc|Example|
+EQUIPMENTSTATUS|Category|Desc|Example|
+EVENTCATEGORY|Category|Desc|Example|
+EVENTREFERENCETYPE|Category|Desc|Example|
+EVENTTYPE|Category|Desc|Example|
+EXPORTINFORMATIONTYPE|Category|Desc|Example|
+FREIGHTPAYMENTTYPE|Category|Desc|Example|
+GEOTYPE|Category|Desc|Example|
+HAZMATMATERIALTYPE|Category|Desc|Example|
+HOLIDAY|Category|Desc|Example|
+INBONDTYPE|Category|Desc|Example|
+INCOTERMSTYPE|Category|Desc|Example|
+INSPECTIONORCHECKTYPE|Category|Desc|Example|
+INVOICECHARGETYPE|Category|Desc|Example|
+INVOICESTATUS|Category|Desc|Example|
+INVOLVEDPARTYREFERENCETYPE|Category|Desc|Example|
+INVOLVEDPARTYTYPE|Category|Desc|Example|
+ITEMCLASSIFICATIONTYPE|Category|Desc|Example|
+ITLCLASSIFICATION|Category|Desc|Example|
+MARKSNUMBERSTYPE|Category|Desc|Example|
+METHODOFPAYMENT|Category|Desc|Example|
+ORDERSTATUS|Category|Desc|Example|
+ORDERTYPE|Category|Desc|Example|
+ORGHIERARCHYTYPE|Category|Desc|Example|
+ORGREFERENCETYPE|Category|Desc|Example|
+ORGROLE|Category|Desc|Example|
+OTHERMEASURETYPE|Category|Desc|Example|
+PACKAGEREFERENCETYPE|Category|Desc|Example|
+PACKAGETYPE|Category|Desc|Example|
+PAYMENTTERMSTYPE|Category|Desc|Example|
+PREADVICESOURCETYPE|Category|Desc|Example|
+RATECALCULATIONTYPE|Category|Desc|Example|
+RATECOSTTYPE|Category|Desc|Example|
+SECURITYDEVICETYPE|Category|Desc|Example|
+SECURITYDEVICEVALUETYPE|Category|Desc|Example|
+SELLPACKTYPE|Category|Desc|Example|
+SERVICELEVEL|Category|Desc|Example|
+SERVICETYPE|Category|Desc|Example|
+SHIPMENTCHARGETYPE|Category|Desc|Example|
+SHIPMENTINSTRUCTIONTYPE|Category|Desc|Example|
+SHIPMENTREFERENCETYPE|Category|Desc|Example|
+SHIPMENTSTATUS|Category|Desc|Example|
+SHIPMENTTERMS|Category|Desc|Example|
+STATEPROVINCE|Category|Desc|Example|
+STOPFUNCTION|Category|Desc|Example|
+SYSTEMROLE|Category|Desc|Example|
+TEMPLATEOWNERTYPE|Category|Desc|Example|
+TIMEZONE|Category|Desc|Example|
+TRANSACTIONSTATUSTYPE|Category|Desc|Example|
+TRANSITTIMETYPE|Category|Desc|Example|
+TRANSPORTMODE|Category|Desc|Example|
+UNITCATEGORY|Category|Desc|Example|
+UNITOFMEASURE|Category|Desc|Example|
+UNITSYSTEM|Category|Desc|Example|
+VERSION|Category|Desc|Example|
+VESSELROLE|Category|Desc|Example|
 
 
 
