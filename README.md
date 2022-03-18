@@ -31,7 +31,7 @@ Each organization may have a Role in the system.  This enables advanced organiza
 Communication method represents a mechanism for communicating with an organization. Common examples of communication methods are Email address, Phone number, Fax number, etc. These contact methods are the means used by the system to inform Involved Parties of changes in shipment status.
 <br>
 ### Shipment
-The Shipment module of NXFolio enables the management of shipments.  Shipments can be created and updated, with details including Involved Parties (Shippers, Consignees, etc.), identifiers such as Bill of Lading number or Booking Number, routing details and conveyances, and more.
+The Shipment module of NXFolio enables the management of shipments.  Shipments can be created and updated, with details including Involved Parties (Shippers, Consignees, etc.), identifiers such as Bill of Lading number or Booking Number, routing details and conveyances, and more.<br>
 <br>
 Shipment Home shows all shipments that are not closed. If the user has appropriate permissions, it provides links to view edit or delete the shipments.  The listing provides a summary of each shipment, including the mode of transportation, reference identifiers, the current status, origin and destination, and the date/time that the shipment was last updated.<br>
 <br>
