@@ -16,6 +16,9 @@
 ### Capabilities of NXFolio
 NXFolio is a software platform that captures and synchronizes data to facilitate trade and transport processes.  It serves as the foundation for cargo community systems, single window systems, and other systems that accelerate trade processing, transport operations, and enables transparency and traceability in supply chain/logistics environments.  The standards-compliant, web-accessible architecture of the platform provides for rapid deployment and rollout, and the flexibility to meet local needs and evolving requirements.  Using a flexible data architecture, NXFolio ensures that you can capture all relevant details of your supply chain and provides you with a platform for the integration of logistics data with trade partners and stakeholders.<br>
 <br>
+<a href="https://ntelx-public-images.s3.amazonaws.com/shipment-any-cols.png"><img src="https://ntelx-public-images.s3.amazonaws.com/accessorial.png" width="400" height="300"/></a>
+<a href="https://ntelx-public-images.s3.amazonaws.com/foliodb-overview-2.png"><img src="https://ntelx-public-images.s3.amazonaws.com/foliodb-overview-2.png" width="400"/></a>
+<br/>
 ### Address Book
 NXFolio includes an Address Book module that allows the management of simple and complex business organizations.  Within this module, an organization can have locations and each location can have multiple contacts.  Organizations can have contacts directly as well.  When creating an organization, you can specify its name as well as multiple addresses.  Each organization, location, or contact can have multiple addresses.  Each organization can be referenced by various identifiers, such SIC code, DUNS number, EIN/tax ID, etc.<br>
 <br>
@@ -51,9 +54,6 @@ Keep up-to-date with release announcements and security updates by subscribing
 to
 [announce@ntelx.org](https://groups.google.com/a/ntelx.org/forum/#!forum/announce).
 
-<a href="https://ntelx-public-images.s3.amazonaws.com/shipment-any-cols.png"><img src="https://ntelx-public-images.s3.amazonaws.com/accessorial.png" width="400" height="300"/></a>
-<a href="https://ntelx-public-images.s3.amazonaws.com/foliodb-overview-2.png"><img src="https://ntelx-public-images.s3.amazonaws.com/foliodb-overview-2.png" width="400"/></a>
-<br/>
 
 ## Installation
 NXFolio Data Model is tested and supported on Postgres 14.2 version. The installation step creates the necessary database schema, tables, sequences, and indexes. It also creates supply chain reference data. There are two options to install NXFolio Data Model:
