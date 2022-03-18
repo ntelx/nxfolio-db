@@ -167,93 +167,92 @@ The center transactional entity Shipment in NXFolio captures every data point th
 ## Reference Data
 There are total 85 reference tables with m records that captures various business data required in global trade. 
 
-Table | Category | Description |
---- | --- | --- |
-ACCESSORIALTYPE|Category|Desc
-ADDRESSTYPE|Category|Desc
-APPOINTMENTREASON|Category|Desc
-BOLSTATUSTYPE|Category|Desc
-BUSINESSACTIVITIES|Category|Desc
-COMMODITYCLASS|Category|Desc
-COMMODITYCLASSGROUP|Category|Desc
-COMMODITYCLASSTYPE|Category|Desc
-COMMUNICATIONMETHODTYPE|Category|Desc
-CONTACTSALUTATION|Category|Desc
-CONTAINERGROUPMAPPING|Category|Desc
-CONTAINERTYPE|Category|Desc
-CONTAINERTYPEMODE|Category|Desc
-CONVEYANCECATEGORY|Category|Desc
-CONVEYANCEMAKETYPE|Category|Desc
-CONVEYANCEMODELTYPE|Category|Desc
-CONVEYANCESTATUS|Category|Desc
-CONVEYANCETYPE|Category|Desc
-COUNTRY|Category|Desc
-DATARESOLUTIONTYPE|Category|Desc
-DATETIMESTAMPREFERENCETYPE|Category|Desc
-DETERMINANT|Category|Desc
-DOCSUBMISSIONSTATUS|Category|Desc
-DOCUMENTFORMATTYPE|Category|Desc
-DOCUMENTSTATUS|Category|Desc
-DOCUMENTTYPE|Category|Desc
-DOMAINOBJECT|Category|Desc
-DVETYPE|Category|Desc
-EDITRANSACTIONSET|Category|Desc
-EDI_ISO_EQUIPMENTTYPE|Category|Desc
-EQUIPMENTSTATUS|Category|Desc
-EVENTCATEGORY|Category|Desc
-EVENTREFERENCETYPE|Category|Desc
-EVENTTYPE|Category|Desc
-EXPORTINFORMATIONTYPE|Category|Desc
-FREIGHTPAYMENTTYPE|Category|Desc
-GEOTYPE|Category|Desc
-HAZMATMATERIALTYPE|Category|Desc
-HOLIDAY|Category|Desc
-INBONDTYPE|Category|Desc
-INCOTERMSTYPE|Category|Desc
-INSPECTIONORCHECKTYPE|Category|Desc
-INVOICECHARGETYPE|Category|Desc
-INVOICESTATUS|Category|Desc
-INVOLVEDPARTYREFERENCETYPE|Category|Desc
-INVOLVEDPARTYTYPE|Category|Desc
-ITEMCLASSIFICATIONTYPE|Category|Desc
-ITLCLASSIFICATION|Category|Desc
-MARKSNUMBERSTYPE|Category|Desc
-METHODOFPAYMENT|Category|Desc
-ORDERSTATUS|Category|Desc
-ORDERTYPE|Category|Desc
-ORGHIERARCHYTYPE|Category|Desc
-ORGREFERENCETYPE|Category|Desc
-ORGROLE|Category|Desc
-OTHERMEASURETYPE|Category|Desc
-PACKAGEREFERENCETYPE|Category|Desc
-PACKAGETYPE|Category|Desc
-PAYMENTTERMSTYPE|Category|Desc
-PREADVICESOURCETYPE|Category|Desc
-RATECALCULATIONTYPE|Category|Desc
-RATECOSTTYPE|Category|Desc
-SECURITYDEVICETYPE|Category|Desc
-SECURITYDEVICEVALUETYPE|Category|Desc
-SELLPACKTYPE|Category|Desc
-SERVICELEVEL|Category|Desc
-SERVICETYPE|Category|Desc
-SHIPMENTCHARGETYPE|Category|Desc
-SHIPMENTINSTRUCTIONTYPE|Category|Desc
-SHIPMENTREFERENCETYPE|Category|Desc
-SHIPMENTSTATUS|Category|Desc
-SHIPMENTTERMS|Category|Desc
-STATEPROVINCE|Category|Desc
-STOPFUNCTION|Category|Desc
-SYSTEMROLE|Category|Desc
-TEMPLATEOWNERTYPE|Category|Desc
-TIMEZONE|Category|Desc
-TRANSACTIONSTATUSTYPE|Category|Desc
-TRANSITTIMETYPE|Category|Desc
-TRANSPORTMODE|Category|Desc
-UNITCATEGORY|Category|Desc
-UNITOFMEASURE|Category|Desc
-UNITSYSTEM|Category|Desc
-VERSION|Category|Desc
-VESSELROLE|Category|Desc
+Table | Category | Description | Example |
+--- | --- | --- | --- |
+ACCESSORIALTYPE|Category|Accessorial freight charges are fees added to a shipper's freight invoice for services the motor freight carrier performed beyond the standard pick-up and delivery operation designated at the time a shipment is tendered. These can be FUEL SURCHARGE, HAZMAT CHARGE, INSURANCE etc. |FUEL SURCHARGE, HAZMAT CHARGE, INSURANCE etc. |
+ADDRESSTYPE|Category|Different address types like billing, shipping and office address||
+APPOINTMENTREASON|Category|Desc||
+BOLSTATUSTYPE|Category|Bill of lading status|REGULAR BILL, SEC 321 TARIFF ACT 1930, FROB E CARGO LADEN IN FOREIGN, ONE ENTRY PER C4 CODE|
+BUSINESSACTIVITIES|Category|Desc||
+COMMODITYCLASS|Category|A list based on National Motor Freight Classification|NMFC CLASS 100, NMFC CLASS 250|
+COMMODITYCLASSGROUP|Category|Group of commodity class|NMFC, NMFC-All, FAK|
+COMMODITYCLASSTYPE|Category|Desc||
+COMMUNICATIONMETHODTYPE|Category|Communication method type|EMAIL, MOBILE, PHONE,EFORWARD|
+CONTACTSALUTATION|Category|Desc||
+CONTAINERGROUPMAPPING|Category|Desc||
+CONTAINERTYPE|Category|Type of containers, either ISO standard or a local standard|20GP, 20PF, 22B0, 22RT|
+CONTAINERTYPEMODE|Category|Desc||
+CONVEYANCECATEGORY|Category|Conveyance category|TRUCK, VESSEL, RAILWAY|
+CONVEYANCEMAKETYPE|Category|Conveyance make|FORD, PETERBILT, KENWORTH, MACK|
+CONVEYANCEMODELTYPE|Category|Conveyance model|MSL, P385, P387|
+CONVEYANCESTATUS|Category|Conveyance status|IN ROUTE, MAINTENANCE|
+CONVEYANCETYPE|Category|Conveyance type|18 Wheeler, Tank Truck, 40 FEET CONTAINER|
+COUNTRY|Category|List of countries|Example|
+DATARESOLUTIONTYPE|Category|Desc|Example|
+DATETIMESTAMPREFERENCETYPE|Category|Desc|Example|
+DETERMINANT|Category|Desc|Example|
+DOCSUBMISSIONSTATUS|Category|Desc|Example|
+DOCUMENTFORMATTYPE|Category|Desc|Example|
+DOCUMENTSTATUS|Category|Desc|Example|
+DOCUMENTTYPE|Category|Desc|Example|
+DOMAINOBJECT|Category|Desc|Example|
+DVETYPE|Category|Desc|Example|
+EDITRANSACTIONSET|Category|Desc|Example|
+EDI_ISO_EQUIPMENTTYPE|Category|ISO container type codes for EDI messaging|Example|
+EQUIPMENTSTATUS|Category|Desc|Example|
+EVENTCATEGORY|Category|Desc|Example|
+EVENTREFERENCETYPE|Category|Desc|Example|
+EVENTTYPE|Category|Desc|Example|
+EXPORTINFORMATIONTYPE|Category|Desc|Example|
+FREIGHTPAYMENTTYPE|Category|Desc|Example|
+GEOTYPE|Category|Desc|Example|
+HAZMATMATERIALTYPE|Category|Desc|Example|
+HOLIDAY|Category|Desc|Example|
+INBONDTYPE|Category|Desc|Example|
+INCOTERMSTYPE|Category|Desc|Example|
+INSPECTIONORCHECKTYPE|Category|Desc|Example|
+INVOICECHARGETYPE|Category|Desc|Example|
+INVOICESTATUS|Category|Desc|Example|
+INVOLVEDPARTYREFERENCETYPE|Category|Any referencing identifier for the involved party.|Business tax ID/EIN, DUNS number, etc.|
+INVOLVEDPARTYTYPE|Category|Indication of the type of party involved with the shipment.|Consignor/Shipper, Consignee, Notify Party, etc.|
+ITEMCLASSIFICATIONTYPE|Category|Desc|Example|
+ITLCLASSIFICATION|Category|Desc|Example|
+MARKSNUMBERSTYPE|Category|The type of marks numbers (on the bill of lading)||
+METHODOFPAYMENT|Category|Method of payment|Credit card, ACH bank transfer, etc.|
+ORDERSTATUS|Category|Status of the order|Planned, in-progress, etc.|
+ORDERTYPE|Category|The type of order|Sales, purchase, distribution|
+ORGHIERARCHYTYPE|Category|The type of organization/entity|Organization, location, port, etc.|
+ORGREFERENCETYPE|Category|A referencing identifier for an organization|Business Tax ID/EIN, DUNS number, etc.|
+ORGROLE|Category|The role of the organization on the shipment|Buyer, Seller, Consignee, Notify Party, etc.|
+OTHERMEASURETYPE|Category|The type for other measurements tacken.|customs weight, billed weight, etc.|
+PACKAGEREFERENCETYPE|Category|Reference identifiers for the package|Tracking numbers, bill of lading numbers, etc.|
+PACKAGETYPE|Category|Type of packaing|Boxes, bins, pallets, bags, etc.|
+PAYMENTTERMSTYPE|Category|Payment terms|Prepaid, collect|
+PREADVICESOURCETYPE|Category|Desc|Example|
+RATECALCULATIONTYPE|Category|Type of rate calculation||
+RATECOSTTYPE|Category|Type of rate cost||
+SECURITYDEVICETYPE|Category|Type of security device|Seal, tag|
+SECURITYDEVICEVALUETYPE|Category|Values relating to the security device.|Transponer ID, GPS Lat/long, Seal|
+SELLPACKTYPE|Category|Unit sale packaging|Container, pallet, bundle, etc.|
+SERVICELEVEL|Category|An offered service level.|Express, overnight, economy, standard, etc.|
+SERVICETYPE|Category|A type of cargo service offered.|Break bulk, pier to pier, container yard, etc.|
+SHIPMENTCHARGETYPE|Category|A charge type for the shipment.|Accessorial, transportation, etc.|
+SHIPMENTINSTRUCTIONTYPE|Category|Instructions regarding the shipment.|Example|
+SHIPMENTREFERENCETYPE|Category|Any referencing identifier for the shipment.|Bill of Lading Number, Booking Number, customs declaration number, etc.|
+SHIPMENTSTATUS|Category|The status of the shipment|Example|
+SHIPMENTTERMS|Category|Standard terms referenced in the shipment/bill of lading|Example|
+STATEPROVINCE|Category|State or Province|Example|
+STOPFUNCTION|Category|The reason or purpose for at stop.|Discharge, port of entry, etc.|
+SYSTEMROLE|Category|Desc|Example|
+TEMPLATEOWNERTYPE|Category|Desc|Example|
+TIMEZONE|Category|Time zones|EST - Eastern Standard Time in U.S.|
+TRANSACTIONSTATUSTYPE|Category|A general category of transactions.|Origin, cancellation, confirmation, etc.|
+TRANSITTIMETYPE|Category|Desc|Example|
+TRANSPORTMODE|Category|The mode of transportation.|Ocean, Air, Rail, Truck, etc.|
+UNITCATEGORY|Category|The general category of measurements.|Length, weight, time, etc.|
+UNITOFMEASURE|Category|The unit of measure.|Kilogram, pounds, etc.|
+UNITSYSTEM|Category|Metric or English/Imperial|Example|
+VESSELROLE|Category|pre-carriage, on-carriage, next vessel||
 
 
 
