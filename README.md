@@ -180,7 +180,7 @@ COMMODITYCLASSTYPE|Category|Desc||
 COMMUNICATIONMETHODTYPE|Category|Communication method type|EMAIL, MOBILE, PHONE,EFORWARD|
 CONTACTSALUTATION|Category|Desc||
 CONTAINERGROUPMAPPING|Category|Desc||
-CONTAINERTYPE|Category|Type of containers|20GP, 20PF, 22B0, 22RT|
+CONTAINERTYPE|Category|Type of containers, either ISO standard or a local standard|20GP, 20PF, 22B0, 22RT|
 CONTAINERTYPEMODE|Category|Desc||
 CONVEYANCECATEGORY|Category|Conveyance category|TRUCK, VESSEL, RAILWAY|
 CONVEYANCEMAKETYPE|Category|Conveyance make|FORD, PETERBILT, KENWORTH, MACK|
@@ -198,7 +198,7 @@ DOCUMENTTYPE|Category|Desc|Example|
 DOMAINOBJECT|Category|Desc|Example|
 DVETYPE|Category|Desc|Example|
 EDITRANSACTIONSET|Category|Desc|Example|
-EDI_ISO_EQUIPMENTTYPE|Category|Desc|Example|
+EDI_ISO_EQUIPMENTTYPE|Category|ISO container type codes for EDI messaging|Example|
 EQUIPMENTSTATUS|Category|Desc|Example|
 EVENTCATEGORY|Category|Desc|Example|
 EVENTREFERENCETYPE|Category|Desc|Example|
@@ -213,47 +213,46 @@ INCOTERMSTYPE|Category|Desc|Example|
 INSPECTIONORCHECKTYPE|Category|Desc|Example|
 INVOICECHARGETYPE|Category|Desc|Example|
 INVOICESTATUS|Category|Desc|Example|
-INVOLVEDPARTYREFERENCETYPE|Category|Desc|Example|
-INVOLVEDPARTYTYPE|Category|Desc|Example|
+INVOLVEDPARTYREFERENCETYPE|Category|Any referencing identifier for the involved party.|Business tax ID/EIN, DUNS number, etc.|
+INVOLVEDPARTYTYPE|Category|Indication of the type of party involved with the shipment.|Consignor/Shipper, Consignee, Notify Party, etc.|
 ITEMCLASSIFICATIONTYPE|Category|Desc|Example|
 ITLCLASSIFICATION|Category|Desc|Example|
-MARKSNUMBERSTYPE|Category|Desc|Example|
-METHODOFPAYMENT|Category|Desc|Example|
-ORDERSTATUS|Category|Desc|Example|
-ORDERTYPE|Category|Desc|Example|
-ORGHIERARCHYTYPE|Category|Desc|Example|
-ORGREFERENCETYPE|Category|Desc|Example|
-ORGROLE|Category|Desc|Example|
-OTHERMEASURETYPE|Category|Desc|Example|
-PACKAGEREFERENCETYPE|Category|Desc|Example|
-PACKAGETYPE|Category|Desc|Example|
-PAYMENTTERMSTYPE|Category|Desc|Example|
+MARKSNUMBERSTYPE|Category|The type of marks numbers (on the bill of lading)||
+METHODOFPAYMENT|Category|Method of payment|Credit card, ACH bank transfer, etc.|
+ORDERSTATUS|Category|Status of the order|Planned, in-progress, etc.|
+ORDERTYPE|Category|The type of order|Sales, purchase, distribution|
+ORGHIERARCHYTYPE|Category|The type of organization/entity|Organization, location, port, etc.|
+ORGREFERENCETYPE|Category|A referencing identifier for an organization|Business Tax ID/EIN, DUNS number, etc.|
+ORGROLE|Category|The role of the organization on the shipment|Buyer, Seller, Consignee, Notify Party, etc.|
+OTHERMEASURETYPE|Category|The type for other measurements tacken.|customs weight, billed weight, etc.|
+PACKAGEREFERENCETYPE|Category|Reference identifiers for the package|Tracking numbers, bill of lading numbers, etc.|
+PACKAGETYPE|Category|Type of packaing|Boxes, bins, pallets, bags, etc.|
+PAYMENTTERMSTYPE|Category|Payment terms|Prepaid, collect|
 PREADVICESOURCETYPE|Category|Desc|Example|
-RATECALCULATIONTYPE|Category|Desc|Example|
-RATECOSTTYPE|Category|Desc|Example|
-SECURITYDEVICETYPE|Category|Desc|Example|
-SECURITYDEVICEVALUETYPE|Category|Desc|Example|
-SELLPACKTYPE|Category|Desc|Example|
-SERVICELEVEL|Category|Desc|Example|
-SERVICETYPE|Category|Desc|Example|
-SHIPMENTCHARGETYPE|Category|Desc|Example|
-SHIPMENTINSTRUCTIONTYPE|Category|Desc|Example|
-SHIPMENTREFERENCETYPE|Category|Desc|Example|
-SHIPMENTSTATUS|Category|Desc|Example|
-SHIPMENTTERMS|Category|Desc|Example|
-STATEPROVINCE|Category|Desc|Example|
-STOPFUNCTION|Category|Desc|Example|
+RATECALCULATIONTYPE|Category|Type of rate calculation||
+RATECOSTTYPE|Category|Type of rate cost||
+SECURITYDEVICETYPE|Category|Type of security device|Seal, tag|
+SECURITYDEVICEVALUETYPE|Category|Values relating to the security device.|Transponer ID, GPS Lat/long, Seal|
+SELLPACKTYPE|Category|Unit sale packaging|Container, pallet, bundle, etc.|
+SERVICELEVEL|Category|An offered service level.|Express, overnight, economy, standard, etc.|
+SERVICETYPE|Category|A type of cargo service offered.|Break bulk, pier to pier, container yard, etc.|
+SHIPMENTCHARGETYPE|Category|A charge type for the shipment.|Accessorial, transportation, etc.|
+SHIPMENTINSTRUCTIONTYPE|Category|Instructions regarding the shipment.|Example|
+SHIPMENTREFERENCETYPE|Category|Any referencing identifier for the shipment.|Bill of Lading Number, Booking Number, customs declaration number, etc.|
+SHIPMENTSTATUS|Category|The status of the shipment|Example|
+SHIPMENTTERMS|Category|Standard terms referenced in the shipment/bill of lading|Example|
+STATEPROVINCE|Category|State or Province|Example|
+STOPFUNCTION|Category|The reason or purpose for at stop.|Discharge, port of entry, etc.|
 SYSTEMROLE|Category|Desc|Example|
 TEMPLATEOWNERTYPE|Category|Desc|Example|
-TIMEZONE|Category|Desc|Example|
-TRANSACTIONSTATUSTYPE|Category|Desc|Example|
+TIMEZONE|Category|Time zones|EST - Eastern Standard Time in U.S.|
+TRANSACTIONSTATUSTYPE|Category|A general category of transactions.|Origin, cancellation, confirmation, etc.|
 TRANSITTIMETYPE|Category|Desc|Example|
-TRANSPORTMODE|Category|Desc|Example|
-UNITCATEGORY|Category|Desc|Example|
-UNITOFMEASURE|Category|Desc|Example|
-UNITSYSTEM|Category|Desc|Example|
-VERSION|Category|Desc|Example|
-VESSELROLE|Category|Desc|Example|
+TRANSPORTMODE|Category|The mode of transportation.|Ocean, Air, Rail, Truck, etc.|
+UNITCATEGORY|Category|The general category of measurements.|Length, weight, time, etc.|
+UNITOFMEASURE|Category|The unit of measure.|Kilogram, pounds, etc.|
+UNITSYSTEM|Category|Metric or English/Imperial|Example|
+VESSELROLE|Category|pre-carriage, on-carriage, next vessel||
 
 
 
