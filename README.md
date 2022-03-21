@@ -168,8 +168,8 @@ The center transactional entity Shipment in NXFolio captures every data point th
 There are total 85 reference tables with m records that captures various business data required in global trade. 
 
 Table | Category | Description | Example |
---- | --- | --- | --- |
-ACCESSORIALTYPE|Category|Accessorial freight charges are fees added to a shipper's freight invoice for services the motor freight carrier performed beyond the standard pick-up and delivery operation designated at the time a shipment is tendered. These can be FUEL SURCHARGE, HAZMAT CHARGE, INSURANCE etc. |FUEL SURCHARGE, HAZMAT CHARGE, INSURANCE etc. |
+-- | -- | --- | --- | 
+ACCESSORIALTYPE|Category|Accessorial freight charges are fees added to a shipper's freight invoice for services the motor freight carrier performed beyond the standard pick-up and delivery operation designated at the time a shipment is tendered. These can be FUEL SURCHARGE, HAZMAT CHARGE, INSURANCE etc. |FUEL SURCHARGE, HAZMAT CHARGE, INSURANCE etc.|
 ADDRESSTYPE|Category|Different address types like billing, shipping and office address||
 APPOINTMENTREASON|Category|Desc||
 BOLSTATUSTYPE|Category|Bill of lading status|REGULAR BILL, SEC 321 TARIFF ACT 1930, FROB E CARGO LADEN IN FOREIGN, ONE ENTRY PER C4 CODE|
@@ -188,19 +188,19 @@ CONVEYANCEMODELTYPE|Category|Conveyance model|MSL, P385, P387|
 CONVEYANCESTATUS|Category|Conveyance status|IN ROUTE, MAINTENANCE|
 CONVEYANCETYPE|Category|Conveyance type|18 Wheeler, Tank Truck, 40 FEET CONTAINER|
 COUNTRY|Category|List of countries|Example|
-DATARESOLUTIONTYPE|Category|Desc|Example|
-DATETIMESTAMPREFERENCETYPE|Category|Desc|Example|
-DETERMINANT|Category|Desc|Example|
-DOCSUBMISSIONSTATUS|Category|Desc|Example|
-DOCUMENTFORMATTYPE|Category|Desc|Example|
-DOCUMENTSTATUS|Category|Desc|Example|
-DOCUMENTTYPE|Category|Desc|Example|
-DOMAINOBJECT|Category|Desc|Example|
+DATARESOLUTIONTYPE|Category|List of all reference tables|Example|
+DATETIMESTAMPREFERENCETYPE|Category|Type of various date that system may capture|INVOICE DATE, INSPECTION DATE, BILL OF LADING DATE|
+DETERMINANT|Category|Type of weight and volume|Shipment Gross Weight, Package Gross Volume, Total Weight, Total Chargeable Weight|
+DOCSUBMISSIONSTATUS|Category|Document submission status|SUBMITTED, RECEIVED|
+DOCUMENTFORMATTYPE|Category|Document file format|JPEG, DOC, PDF|
+DOCUMENTSTATUS|Category|Document status|CREATED, NEW, ON HOLD|
+DOCUMENTTYPE|Category|Type of business document|Commercial Document, Customs Document, Government Documents|
+DOMAINOBJECT|Category|Type of domain object in NXFolio|DOCUMENT, EQUIPMENT, EVENT|
 DVETYPE|Category|Desc|Example|
 EDITRANSACTIONSET|Category|Desc|Example|
-EDI_ISO_EQUIPMENTTYPE|Category|ISO container type codes for EDI messaging|Example|
-EQUIPMENTSTATUS|Category|Desc|Example|
-EVENTCATEGORY|Category|Desc|Example|
+EDI_ISO_EQUIPMENTTYPE|Category|ISO container type codes for EDI messaging|20DV - 20 DRY VAN, 20RH - 20 REEFER/HEATED, 2020 - INSULATED/VENTED|
+EQUIPMENTSTATUS|Category|Equipment statuses|EMPTY, LOADED|
+EVENTCATEGORY|Category|Event categories|TRANSPORTATION, BUSINESS, SYS EVENT|
 EVENTREFERENCETYPE|Category|Desc|Example|
 EVENTTYPE|Category|Desc|Example|
 EXPORTINFORMATIONTYPE|Category|Desc|Example|
