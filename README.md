@@ -173,15 +173,11 @@ ACCESSORIALTYPE|Category|Accessorial freight charges are fees added to a shipper
 ADDRESSTYPE|Category|Different address types like billing, shipping and office address||
 APPOINTMENTREASON|Category|Desc||
 BOLSTATUSTYPE|Category|Bill of lading status|REGULAR BILL, SEC 321 TARIFF ACT 1930, FROB E CARGO LADEN IN FOREIGN, ONE ENTRY PER C4 CODE|
-BUSINESSACTIVITIES|Category|Desc||
 COMMODITYCLASS|Category|A list based on National Motor Freight Classification|NMFC CLASS 100, NMFC CLASS 250|
 COMMODITYCLASSGROUP|Category|Group of commodity class|NMFC, NMFC-All, FAK|
 COMMODITYCLASSTYPE|Category|Desc||
 COMMUNICATIONMETHODTYPE|Category|Communication method type|EMAIL, MOBILE, PHONE,EFORWARD|
-CONTACTSALUTATION|Category|Desc||
-CONTAINERGROUPMAPPING|Category|Desc||
 CONTAINERTYPE|Category|Type of containers, either ISO standard or a local standard|20GP, 20PF, 22B0, 22RT|
-CONTAINERTYPEMODE|Category|Desc||
 CONVEYANCECATEGORY|Category|Conveyance category|TRUCK, VESSEL, RAILWAY|
 CONVEYANCEMAKETYPE|Category|Conveyance make|FORD, PETERBILT, KENWORTH, MACK|
 CONVEYANCEMODELTYPE|Category|Conveyance model|MSL, P385, P387|
@@ -196,7 +192,6 @@ DOCUMENTFORMATTYPE|Category|Document file format|JPEG, DOC, PDF|
 DOCUMENTSTATUS|Category|Document status|CREATED, NEW, ON HOLD|
 DOCUMENTTYPE|Category|Type of business document|Commercial Document, Customs Document, Government Documents|
 DOMAINOBJECT|Category|Type of domain object in NXFolio|DOCUMENT, EQUIPMENT, EVENT|
-DVETYPE|Category|Desc|Example|
 EDITRANSACTIONSET|Category|Desc|Example|
 EDI_ISO_EQUIPMENTTYPE|Category|ISO container type codes for EDI messaging|20DV - 20 DRY VAN, 20RH - 20 REEFER/HEATED, 2020 - INSULATED/VENTED|
 EQUIPMENTSTATUS|Category|Equipment statuses|EMPTY, LOADED|
