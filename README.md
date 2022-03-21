@@ -171,19 +171,19 @@ Table  | Description | Example |
 -- | --- | --- | 
 ACCESSORIALTYPE|Accessorial freight charges are fees added to a shipper's freight invoice for services the motor freight carrier performed beyond the standard pick-up and delivery operation designated at the time a shipment is tendered. These can be FUEL SURCHARGE, HAZMAT CHARGE, INSURANCE etc. |FUEL SURCHARGE, HAZMAT CHARGE, INSURANCE etc.|
 ADDRESSTYPE|Different address types like billing, shipping and office address||
-APPOINTMENTREASON|Desc||
+APPOINTMENTREASON|||
 BOLSTATUSTYPE|Bill of lading status|REGULAR BILL, SEC 321 TARIFF ACT 1930, FROB E CARGO LADEN IN FOREIGN, ONE ENTRY PER C4 CODE|
 COMMODITYCLASS|A list based on National Motor Freight Classification|NMFC CLASS 100, NMFC CLASS 250|
 COMMODITYCLASSGROUP|Group of commodity class|NMFC, NMFC-All, FAK|
-COMMODITYCLASSTYPE|Desc||
+COMMODITYCLASSTYPE|Type of commodity class||
 COMMUNICATIONMETHODTYPE|Communication method type|EMAIL, MOBILE, PHONE,EFORWARD|
 CONTAINERTYPE|Type of containers, either ISO standard or a local standard|20GP, 20PF, 22B0, 22RT|
 CONVEYANCECATEGORY|Conveyance category|TRUCK, VESSEL, RAILWAY|
-CONVEYANCEMAKETYPE|Conveyance make|FORD, PETERBILT, KENWORTH, MACK|
-CONVEYANCEMODELTYPE|Conveyance model|MSL, P385, P387|
+CONVEYANCEMAKETYPE|Type of conveyance make|FORD, PETERBILT, KENWORTH, MACK|
+CONVEYANCEMODELTYPE|Type of conveyance model|MSL, P385, P387|
 CONVEYANCESTATUS|Conveyance status|IN ROUTE, MAINTENANCE|
 CONVEYANCETYPE|Conveyance type|18 Wheeler, Tank Truck, 40 FEET CONTAINER|
-COUNTRY|List of countries|Example|
+COUNTRY|List of countries|AUSTRALIA, BANGLADESH, BELIZE|
 DATARESOLUTIONTYPE|List of all reference tables|Example|
 DATETIMESTAMPREFERENCETYPE|Type of various date that system may capture|INVOICE DATE, INSPECTION DATE, BILL OF LADING DATE|
 DETERMINANT|Type of weight and volume|Shipment Gross Weight, Package Gross Volume, Total Weight, Total Chargeable Weight|
@@ -192,24 +192,23 @@ DOCUMENTFORMATTYPE|Document file format|JPEG, DOC, PDF|
 DOCUMENTSTATUS|Document status|CREATED, NEW, ON HOLD|
 DOCUMENTTYPE|Type of business document|Commercial Document, Customs Document, Government Documents|
 DOMAINOBJECT|Type of domain object in NXFolio|DOCUMENT, EQUIPMENT, EVENT|
-EDITRANSACTIONSET|Desc|Example|
 EDI_ISO_EQUIPMENTTYPE|ISO container type codes for EDI messaging|20DV - 20 DRY VAN, 20RH - 20 REEFER/HEATED, 2020 - INSULATED/VENTED|
-EQUIPMENTSTATUS|Equipment statuses|EMPTY, LOADED|
+EQUIPMENTSTATUS|Equipment status|EMPTY, LOADED|
 EVENTCATEGORY|Type of event categories|TRANSPORTATION, BUSINESS, SYS EVENT|
 EVENTREFERENCETYPE|Type of event references|CODECO MESSAGE REFERENCE NUMBER, AIR WAYBILL NUMBER, FORWARDERS/AGENTS REFERENCE NUMBER, HOUSE OCEAN BILL NUMBER|
 EVENTTYPE|Type of event|ARRIVED, ARRIVED AT CUSTOMS, AWAITING CLEARANCE, CARRIER RELEASE|
 EXPORTINFORMATIONTYPE|Export Information|Shipments for Federal agencies and their employees for their exclusive use, Single gift parcels covered by Bureau of Export Administration General License Gift, Shipments under U.S. government contract for the construction of facilities overseas|
 FREIGHTPAYMENTTYPE|Type of freight payment|COLLECT, PREPAID|
 HAZMATMATERIALTYPE|Type of Hazmat Material|HAZARDOUS MATERIAL CONTACT, HAZARDOUS MATERIAL CODE QUALIFIER, UN HAZARDOUS MATERIAL|
-INBONDTYPE|Desc|Example|
-INCOTERMSTYPE|Desc|Example|
-INSPECTIONORCHECKTYPE|Desc|Example|
-INVOICECHARGETYPE|Desc|Example|
-INVOICESTATUS|Desc|Example|
+INBONDTYPE|Type of Inbond|IMMEDIATE TRANSPORTATION, IMMEDIATE EXPORTATION, TRANSIT|
+INCOTERMSTYPE|Incoterms are the terms used in international trade to define the seller’s and buyer’s responsibilities as part of the sales contract. |FREE CARRIER, CARRIAGE PAID TO, DELIVERED EX SHIP, NON-PRIVILEGED FOREIGN|
+INSPECTIONORCHECKTYPE|Type of inspection|ALERT SHORTAGES, DEVICE BROKEN, DEVICE NUMBER NO MATCH, DEVICE TEST FAILED|
+INVOICECHARGETYPE|Type of invoice charge|FREIGHT CHARGES, FUEL SURCHARGE, DELIVERY AREA SURCHARGE COMM, WEIGHING & RESEARCH ADJUST|
+INVOICESTATUS|Invoice status|ADJUSTED, APPROVED|
 INVOLVEDPARTYREFERENCETYPE|Any referencing identifier for the involved party.|Business tax ID/EIN, DUNS number, etc.|
 INVOLVEDPARTYTYPE|Indication of the type of party involved with the shipment.|Consignor/Shipper, Consignee, Notify Party, etc.|
-ITEMCLASSIFICATIONTYPE|Desc|Example|
-ITLCLASSIFICATION|Desc|Example|
+ITEMCLASSIFICATIONTYPE|Type of item  classification|PART NUMBER, MODEL NUMBER, SCHEDULE B NUMBER|
+ITLCLASSIFICATION||ELECTRONIC GOODS, SCHEDULE B|
 MARKSNUMBERSTYPE|The type of marks numbers (on the bill of lading)||
 METHODOFPAYMENT|Method of payment|Credit card, ACH bank transfer, etc.|
 ORDERSTATUS|Status of the order|Planned, in-progress, etc.|
@@ -221,30 +220,26 @@ OTHERMEASURETYPE|The type for other measurements tacken.|customs weight, billed 
 PACKAGEREFERENCETYPE|Reference identifiers for the package|Tracking numbers, bill of lading numbers, etc.|
 PACKAGETYPE|Type of packaing|Boxes, bins, pallets, bags, etc.|
 PAYMENTTERMSTYPE|Payment terms|Prepaid, collect|
-PREADVICESOURCETYPE|Desc|Example|
-RATECALCULATIONTYPE|Type of rate calculation||
-RATECOSTTYPE|Type of rate cost||
+RATECALCULATIONTYPE|Type of rate calculation|Standard Internal Tables, External Engine|
+RATECOSTTYPE|Type of rate cost|FIXED, VARIABLE, MINIMUM|
 SECURITYDEVICETYPE|Type of security device|Seal, tag|
 SECURITYDEVICEVALUETYPE|Values relating to the security device.|Transponer ID, GPS Lat/long, Seal|
 SELLPACKTYPE|Unit sale packaging|Container, pallet, bundle, etc.|
 SERVICELEVEL|An offered service level.|Express, overnight, economy, standard, etc.|
 SERVICETYPE|A type of cargo service offered.|Break bulk, pier to pier, container yard, etc.|
 SHIPMENTCHARGETYPE|A charge type for the shipment.|Accessorial, transportation, etc.|
-SHIPMENTINSTRUCTIONTYPE|Instructions regarding the shipment.|Example|
+SHIPMENTINSTRUCTIONTYPE|Instructions regarding the shipment.|CARGO DESCRIPTION, HANDLING INSTRUCTIONS, HAZMAT INSTRUCTIONS|
 SHIPMENTREFERENCETYPE|Any referencing identifier for the shipment.|Bill of Lading Number, Booking Number, customs declaration number, etc.|
-SHIPMENTSTATUS|The status of the shipment|Example|
-SHIPMENTTERMS|Standard terms referenced in the shipment/bill of lading|Example|
-STATEPROVINCE|State or Province|Example|
+SHIPMENTSTATUS|The status of the shipment|BOOKING ACCEPTED, DELAYED, CUSTOMERHOLD|
+SHIPMENTTERMS|Standard terms referenced in the shipment/bill of lading|CARRIAGE AND INSURANCE PAID TO, EX QUAY, FREE ON BOARD|
+STATEPROVINCE|State or Province|Alabama, APO - AA|
 STOPFUNCTION|The reason or purpose for at stop.|Discharge, port of entry, etc.|
-SYSTEMROLE|Desc|Example|
-TEMPLATEOWNERTYPE|Desc|Example|
 TIMEZONE|Time zones|EST - Eastern Standard Time in U.S.|
 TRANSACTIONSTATUSTYPE|A general category of transactions.|Origin, cancellation, confirmation, etc.|
-TRANSITTIMETYPE|Desc|Example|
 TRANSPORTMODE|The mode of transportation.|Ocean, Air, Rail, Truck, etc.|
 UNITCATEGORY|The general category of measurements.|Length, weight, time, etc.|
 UNITOFMEASURE|The unit of measure.|Kilogram, pounds, etc.|
-UNITSYSTEM|Metric or English/Imperial|Example|
+UNITSYSTEM|Metric or English/Imperial|METRIC, ENGLISH|
 VESSELROLE|pre-carriage, on-carriage, next vessel||
 
 
