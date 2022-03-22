@@ -165,7 +165,7 @@ The center transactional entity Shipment in NXFolio captures every data point th
   </div>
 
 ## Reference Data
-There are total 85 reference tables with m records that captures various business data required in global trade. 
+There are more than 80 reference tables that capture various business data required in global trade.
 
 Table  | Description | Example |
 -- | --- | --- | 
