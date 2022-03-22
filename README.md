@@ -112,7 +112,8 @@ psql -h <host> -p <port> -d postgres -U foliodbowner
 
 4. Create a new database **foliodb**
 ```
-postgres=# CREATE USER foliodbowner WITH PASSWORD 'reset_password' CREATEDB;
+postgres=# CREATE DATABASE foliodb OWNER = foliodbowner;
+
 ```
 5. Connect to **foliodb** database
 ```
