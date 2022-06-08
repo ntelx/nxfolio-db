@@ -252,7 +252,13 @@ Use examples liberally, and show the expected output if you can. It's helpful to
 Tell people where they can go to for help. It can be any combination of an issue tracker, a chat room, an email address, etc.
 
 ## Roadmap
-If you have ideas for releases in the future, it is a good idea to list them in the README.
+The NXFolio Open Source project is releasing and enhancing the NXFolio software in several iterative releases. The first release focuses on the large, comprehensive, relational database model that is the foundation for the software and data management, ensuring the data tables and updated initial reference data are deployable in the latest release of the open source database PostGres. The next phase will focus on the data integration engine known as NXFolio-X, providing legacy support for EDI messaging and custom data formats converted into standardized NXFolio XML.   The web-based business application, the NXFolio user interface, will be the focus of the following release. Lastly, NTELX will incorporate the DCSA APIs into NXFolio, enhancing interoperability using this emerging open source standard that covers various APIs such as electronic bills of lading and track and trace.
+
+NXFolio Open Source releases are planned along the following general timeline:
+* v1.0, Data Model: 15 June 2022
+* v1.0, NXFolio-X: 10 Aug 2022
+* v1.0, NXFolio UI: 7 Sep 2022
+* v1.0, DCSA APIs: 5 Oct 2022
 
 ## Contributing
 State if you are open to contributions and what your requirements are for accepting them.
@@ -265,7 +271,7 @@ You can also document commands to lint the code or run tests. These steps help t
 Show your appreciation to those who have contributed to the project.
 
 ## License
-For open source projects, say how it is licensed.
+NXFolio is licensed under the permissive open source Apache license. This license requires that NTELX be notified if the software is to be used for proprietary purposes. NTELX requests that along with this notification, that NTELX be granted permission to reference your organization's proprietary use in NTELX's company literature an information on the NXFolio Open Source project.
 
 ## Project status
 If you have run out of energy or time for your project, put a note at the top of the README saying that development has slowed down or stopped completely. Someone may choose to fork your project or volunteer to step in as a maintainer or owner, allowing your project to keep going. You can also make an explicit request for maintainers.
